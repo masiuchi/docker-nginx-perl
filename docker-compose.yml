@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - '8080:80'
+    volumes:
+      - ./conf/nginx.conf:/usr/local/nginx/conf/nginx.conf:ro
+      - ./conf/PerlHandler.pm:/usr/local/nginx/conf/PerlHandler.pm:ro
+
